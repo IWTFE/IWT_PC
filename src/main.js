@@ -18,6 +18,7 @@ import Page4 from './components/nav2/Page4.vue'
 import Page5 from './components/nav2/Page5.vue'
 import Page6 from './components/nav3/Page6.vue'
 
+
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -32,7 +33,7 @@ const routes = [
     children: [
       { path: '/main', component: Main },
       { path: '/table', component: Table, name: 'Table' },
-      { path: '/form', component: Form, name: 'Form' },
+      { path: '/form', component: Form, name: '发布广告' },
       { path: '/page3', component: Page3, name: '页面3' },
     ]
   },
@@ -78,5 +79,3 @@ new Vue({
 }).$mount('#app')
 
 router.replace('/login')
-
-
