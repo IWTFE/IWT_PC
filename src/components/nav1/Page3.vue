@@ -88,7 +88,7 @@
 	</el-tabs>
 	<el-dialog :title="editFormTtile" v-model="editFormVisible">
 		<div class="dtree">
-<div class="dTreeNode"><img id="id0" src="/tools/dtree/img/base.gif" alt="">后台管理菜单</div><div id="dd0" class="clip" style="display:block;"><div class="dTreeNode"><a href="javascript: d.o(1);"><img id="jd1" src="/tools/dtree/img/minusbottom.gif" alt=""></a><img id="id1" src="/tools/dtree/img/folderopen.gif" alt=""><a href="javascript: d.o(1);" class="node">系统用户管理</a></div><div id="dd1" class="clip" style="display: block;"><div class="dTreeNode"><img src="/tools/dtree/img/empty.gif" alt=""><a href="javascript: d.o(2);"><img id="jd2" src="/tools/dtree/img/minus.gif" alt=""></a><img id="id2" src="/tools/dtree/img/folderopen.gif" alt=""><a href="javascript: d.o(2);" class="node">用户权限管理</a></div><div id="dd2" class="clip" style="display: block;"><div class="dTreeNode"><img src="/tools/dtree/img/empty.gif" alt=""><img src="/tools/dtree/img/line.gif" alt=""><img src="/tools/dtree/img/join.gif" alt=""><img id="id3" src="/tools/dtree/img/page.gif" alt="">创建用户</div><div class="dTreeNode"><img src="/tools/dtree/img/empty.gif" alt=""><img src="/tools/dtree/img/line.gif" alt=""><img src="/tools/dtree/img/joinbottom.gif" alt=""><img id="id4" src="/tools/dtree/img/page.gif" alt="">修改用户</div></div><div class="dTreeNode"><img src="/tools/dtree/img/empty.gif" alt=""><img src="/tools/dtree/img/join.gif" alt=""><img id="id5" src="/tools/dtree/img/page.gif" alt="">用户权限查询</div><div class="dTreeNode"><img src="/tools/dtree/img/empty.gif" alt=""><img src="/tools/dtree/img/joinbottom.gif" alt=""><img id="id6" src="/tools/dtree/img/page.gif" alt="">重置用户密码</div></div></div></div>
+<div class="dTreeNode"><img id="id0" src="../../assets/base.gif" alt="">后台管理菜单</div><div id="dd0" class="clip" style="display:block;"><div class="dTreeNode"><img id="jd1" src="../../assets/minusbottom.gif" alt=""><img id="id1" src="../../assets/folderopen.gif" alt="">系统用户管理</div><div id="dd1" class="clip" style="display: block;"><div class="dTreeNode"><img src="../../assets/empty.gif" alt=""><img id="jd2" src="../../assets/minus.gif" alt=""><img id="id2" src="../../assets/folderopen.gif" alt="">用户权限管理</div><div id="dd2" class="clip" style="display: block;"><div class="dTreeNode"><img src="../../assets/empty.gif" alt=""><img src="../../assets/line.gif" alt=""><img src="../../assets/join.gif" alt=""><img id="id3" src="../../assets/page.gif" alt="">创建用户</div><div class="dTreeNode"><img src="../../assets/empty.gif" alt=""><img src="../../assets/line.gif" alt=""><img src="../../assets/joinbottom.gif" alt=""><img id="id4" src="../../assets/page.gif" alt="">修改用户</div></div><div class="dTreeNode"><img src="../../assets/empty.gif" alt=""><img src="../../assets/join.gif" alt=""><img id="id5" src="../../assets/page.gif" alt="">用户权限查询</div><div class="dTreeNode"><img src="../../assets/empty.gif" alt=""><img src="../../assets/joinbottom.gif" alt=""><img id="id6" src="../../assets/page.gif" alt="">重置用户密码</div></div></div></div>
 	</el-dialog>
 </div>
 </template>
@@ -187,6 +187,10 @@ table { border-collapse: collapse;}
 .bg_tjall .timetj{font-weight:normal;margin-right:20px;}
 .bg_tjall .five{width:8%;}
 .bg_tjall .errred{color:#c72c3e;}
-
+.dtree { margin-left:150px;  }
+.dtree img {
+	border: 0px;
+	vertical-align: top;
+}
 .tj_title{width:100%;min-width:1000px;height:30px;line-height:30px;background:url(../../assets/tablebj.jpg) repeat-x;text-indent:20px;color:#fff;font-weight:bold;}
 </style>
