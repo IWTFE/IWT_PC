@@ -18,8 +18,7 @@
 		<!--列表-->
 		<template>
 			<el-table :data="tableData" highlight-current-row v-loading="listLoading" style="width: 100%;">
-				<el-table-column type="index" width="50">
-				</el-table-column>
+				<el-table-column type="index" width="50" prop="$index" label="序号"></el-table-column>
 				<el-table-column prop="name" label="姓名" width="180" sortable>
 				</el-table-column>
 				<el-table-column prop="sex" label="性别" width="100" :formatter="formatSex" sortable>
@@ -206,7 +205,7 @@
 						}
 					},1000);
 				}).catch(() => {
-							
+
 				});
 			},
 			//显示编辑界面
@@ -226,7 +225,7 @@
 
 				_this.$refs.editForm.validate((valid)=>{
 					if(valid){
-						
+
 						_this.$confirm('确认提交吗？','提示',{}).then(()=>{
 							_this.editLoading=true;
 							NProgress.start();
@@ -266,7 +265,7 @@
 									}
 								}
 							},1000);
-						
+
 						});
 
 					}
@@ -279,7 +278,7 @@
 
 				this.editFormVisible=true;
 				this.editFormTtile='新增';
-				
+
 				this.editForm.id=0;
 				this.editForm.name='';
 				this.editForm.sex=1;
@@ -295,7 +294,7 @@
 	.toolbar .el-form-item {
 		margin-bottom: 10px;
 	}
-	
+
 	.toolbar {
 		background: #fff;
 		padding: 10px 10px 0px 10px;
