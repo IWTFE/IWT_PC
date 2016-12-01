@@ -52,7 +52,6 @@
 </template>
 
 <script>
-	import '../style.css';
   export default {
     data() {
       return {
@@ -105,7 +104,7 @@
   }
 </script>
 
-<style scoped>
+<style>
 
 	.fade-enter-active,
 	.fade-leave-active {
@@ -201,5 +200,9 @@
 	}
 	.el-menu {
     background-color: #e5e9f2;
+	}
+	.right-opt .el-breadcrumb__item__inner, .right-opt .el-breadcrumb__item .el-breadcrumb__item__inner{
+	  color: #fff;
+	  cursor: pointer;
 	}
 </style>
