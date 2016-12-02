@@ -18,10 +18,10 @@
 				<el-menu default-active="/table" class="el-menu-vertical-demo" @open="handleopen"
 					@close="handleclose" @select="handleselect" theme="light" unique-opened router>
 					<el-submenu index="1">
-						<template slot="title"><i class="el-icon-message"></i>导航一</template>
-						<el-menu-item index="/table">首页</el-menu-item>
+						<template slot="title"><i class="el-icon-message"></i>广告管理</template>
+						<el-menu-item index="/table">列表</el-menu-item>
 						<el-menu-item index="/form">发布广告</el-menu-item>
-						<el-menu-item index="/page3">页面3</el-menu-item>
+						<el-menu-item index="/page3">用户管理</el-menu-item>
 					</el-submenu>
 					<el-submenu index="2">
 						<template slot="title"><i class="fa fa-id-card-o"></i>导航二</template>

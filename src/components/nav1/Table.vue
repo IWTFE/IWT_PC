@@ -12,6 +12,9 @@
 				<el-form-item>
 					<el-button @click="handleAdd">新增</el-button>
 				</el-form-item>
+				<el-form-item>
+					<export-excel :listTitle="tableTitle" :listData="tableData"></export-excel>
+				</el-form-item>
 			</el-form>
 		</el-col>
 
@@ -82,7 +85,7 @@
 <script>
 	import util from '../../common/util'
 	import NProgress from 'nprogress'
-
+	import excelVue from '../../utils/exportExcel/exportExcel.vue';
   export default {
     data() {
       return {
@@ -113,6 +116,7 @@
 						{ required: true, message: '请输入姓名', trigger: 'blur' }
 					]
 				},
+				tableTitle: {"title":['#','姓名','性别','年龄','生日','地址']},
 				tableData: [{
 					id:1000,
 					name: 'lanqy1',
@@ -286,7 +290,10 @@
 				this.editForm.birth='';
 				this.editForm.addr='';
 			}
-    }
+    },
+		components: {
+			'export-excel': excelVue
+		}
   }
 </script>
 

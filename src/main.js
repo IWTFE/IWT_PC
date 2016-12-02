@@ -30,12 +30,12 @@ const routes = [
   {
     path: '/',
     component: Home,
-    name: '导航一',
+    name: '广告管理',
     children: [
       { path: '/main', component: Main },
-      { path: '/table', component: Table, name: 'Table' },
+      { path: '/table', component: Table, name: '列表' },
       { path: '/form', component: Form, name: '发布广告' },
-      { path: '/page3', component: Page3, name: '页面3' },
+      { path: '/page3', component: Page3, name: '用户管理' },
     ]
   },
   {
