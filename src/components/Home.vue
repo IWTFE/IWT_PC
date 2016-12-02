@@ -55,8 +55,8 @@
   export default {
     data() {
       return {
-		  currentPathName:'Table',
-		  currentPathNameParent:'导航一',
+		  currentPathName:'广告管理',
+		  currentPathNameParent:'列表',
         form: {
           name: '',
           region: '',
