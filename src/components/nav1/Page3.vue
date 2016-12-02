@@ -40,7 +40,7 @@
 						</el-col>
 					</el-row>
 			</el-form>
-			<el-table :data="data | test" highlight-current-row v-loading="listLoading" style="margin:0 20px; width:auto; " id="table">
+			<el-table :data="data" highlight-current-row v-loading="listLoading" style="margin:0 20px; width:auto; " id="table">
 				<el-table-column type="index" width="70" label="序号"></el-table-column>
 				<el-table-column prop="roleCode" label="角色代码" width="120" sortable>
 				</el-table-column>
