@@ -2,8 +2,8 @@ var idTmr;
 function  getExplorer() {
     var explorer = window.navigator.userAgent ;
     //ie
-    if (explorer.indexOf("MSIE") >= 0) {
-        return 'ie';
+    if (!!window.ActiveXObject || "ActiveXObject" in window){
+      return 'ie';
     }
     //firefox
     else if (explorer.indexOf("Firefox") >= 0) {
