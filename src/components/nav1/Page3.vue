@@ -78,7 +78,7 @@
 		roleDescribe:"业务管理员",
 		time:"2016-08-27 17:06:59",
 		lastModified:"admin",
-		statu:"0",
+		statu:"正常",
 		remarks:"请勿修改"
 	},{
 		roleCode:"222",
@@ -87,7 +87,7 @@
 		roleDescribe:"业务管理员",
 		time:"2016-08-27 17:06:59",
 		lastModified:"admin",
-		statu:"1",
+		statu:"冻结",
 		remarks:"请勿修改"
 	},{
 		roleCode:"333",
@@ -96,7 +96,7 @@
 		roleDescribe:"业务管理员",
 		time:"2016-08-27 17:06:59",
 		lastModified:"admin",
-		statu:"0",
+		statu:"销户",
 		remarks:"请勿修改"
 	}];
 	function screen(key){
@@ -109,13 +109,22 @@
 		}
 		return res;
 	}
+	function query(data,key,value){
+		if(data instanceof Array){
+			var newData = [];
+			for(var i=0,len = data.length;i<len;i++){
+				(data[i][key] === value) &&	newData.push(data[i]);
+			}
+			return newData;
+		}
+	}
   export default {
 		data(){
 			return {
 				data : data,
 				roleName : screen("roleName"),
 				roleLevel : screen("roleLevel"),
-				statu : screen("statu"),
+				status : screen("statu"),
 				editFormVisible:false,
 				form: {
           name: '',
@@ -160,7 +169,14 @@
 				console.log(a+" "+b);
 			},
 			query(){
-				console.log(this.data);
+				var roleName = this.form.roleName,
+						roleLevel = this.form.roleLevel,
+						statu = this.form.statu,
+						newData = data;
+				if(roleName) newData = query(data,"roleName",roleName);
+				if(roleLevel) newData = query(newData,"roleLevel",roleLevel);
+				if(statu) newData = query(newData,"statu",statu);
+				this.data = newData;
 			},
 			onPrint(){
 				var iframe = document.createElement("iframe");
