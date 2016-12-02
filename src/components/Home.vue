@@ -205,4 +205,8 @@
 	  color: #fff;
 	  cursor: pointer;
 	}
+	.el-submenu .el-menu-item:hover, .el-submenu__title:hover {
+			background: #bc1b2e;
+			color: #fff;
+	}
 </style>
