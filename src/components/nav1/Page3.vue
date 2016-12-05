@@ -201,10 +201,9 @@ table { border-collapse: collapse;}
 .bg_table td a{color:#0e6390;font-weight:bold;text-decoration:underline;}
 .bg_table td a:hover{color:#c72e3e;text-decoration:underline;}
 .bg_table td strong{color:#c3c3c3}
-.bg_table td .tzjlred{color:#F00;vertical-align:middle;}
-.bg_table td .tzjlblue{color:#03F;font-style:normal;vertical-align:middle;}
-.bg_table td i{font-style:normal;vertical-align:middle;}
-
+.bg_table td .tzjlred{ color:#F00;vertical-align:middle; }
+.bg_table td .tzjlblue{ color:#03F;font-style:normal;vertical-align:middle; }
+.bg_table td i{ font-style:normal;vertical-align:middle; }
 .dtree img {
 	border: 0px;
 	vertical-align: top;
