@@ -279,10 +279,8 @@
 			//显示新增界面
 			handleAdd:function(){
 				var _this=this;
-
 				this.editFormVisible=true;
 				this.editFormTtile='新增';
-
 				this.editForm.id=0;
 				this.editForm.name='';
 				this.editForm.sex=1;

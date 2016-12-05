@@ -34,7 +34,7 @@
 						<el-col :span="4">&nbsp;</el-col>
 						<el-col :span="8" style="text-align:right">
 							<el-form-item>
-								<el-button @click="onPrint">打印</el-button>
+								<print-table :listID="'table'"></print-table>
 								<el-button type="primary" @click="query">查询</el-button>
 							</el-form-item>
 						</el-col>
@@ -71,6 +71,7 @@
 </div>
 </template>
 <script>
+	import printer from '../../utils/printer/printer.vue';
 	var data = [{
 		roleCode:"111",
 		roleName:"业务管理员",
@@ -138,6 +139,9 @@
         }
 			}
 		},
+		components: {
+			'print-table': printer
+		},
     methods: {
       handleRemove(tab) {
         //console.log(tab);
@@ -177,15 +181,6 @@
 				if(roleLevel) newData = query(newData,"roleLevel",roleLevel);
 				if(statu) newData = query(newData,"statu",statu);
 				this.data = newData;
-			},
-			onPrint(){
-				var iframe = document.createElement("iframe");
-				var table = document.getElementById("table").cloneNode(true);
-				iframe.name = "frame";
-				document.body.appendChild(iframe);
-				var o = window.open("about:blank","frame");
-				iframe.contentWindow.document.body.appendChild(table);
-				iframe.contentWindow.print();
 			}
     }
   };
