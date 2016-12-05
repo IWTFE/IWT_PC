@@ -128,14 +128,9 @@
 				status : screen("statu"),
 				editFormVisible:false,
 				form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+          roleName: '',
+          roleLevel: '',
+          statu: ''
         }
 			}
 		},
