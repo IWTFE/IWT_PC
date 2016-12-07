@@ -127,7 +127,6 @@
 		    </table>
 		</div>
 		</el-tab-pane>
-		<el-tab-pane label="定时任务补偿">444</el-tab-pane>
 	</el-tabs>
 	<el-dialog :title="editFormTtile" v-model="editFormVisible">
 		<div class="dtree">
