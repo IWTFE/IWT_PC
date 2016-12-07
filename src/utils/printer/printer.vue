@@ -1,11 +1,11 @@
 <template>
-  <el-button v-on:click="print()">打印</el-button>
+  <el-button v-on:click="printer()">打印</el-button>
 </template>
 <script type="text/javascript">
-  export default{
+  export default { 
     props:["listID"],
     methods:{
-      print(){
+      printer(){
         var iframe = document.createElement("iframe");
 				var table = document.getElementById(this.listID).cloneNode(true);
 				iframe.name = "frame";
