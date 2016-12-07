@@ -34,7 +34,6 @@
 						<el-col :span="4">&nbsp;</el-col>
 						<el-col :span="8" style="text-align:right">
 							<el-form-item>
-								<print-table :listID="'table'"></print-table>
 								<el-button type="primary" @click="query">查询</el-button>
 							</el-form-item>
 						</el-col>
@@ -61,7 +60,73 @@
 				</el-table-column>
 			</el-table>
 		</el-tab-pane>
-		<el-tab-pane label="配置管理">222</el-tab-pane>
+		<el-tab-pane label="打印">
+			<el-row :gutter="80">
+					<el-col :span="20" style="text-align:right">
+						<el-print :target="'print'">打印本页内容</el-print>
+					</el-col>
+			</el-row>
+
+		  <div id="print">
+		      <h1 class="title">中国福利彩票积分服务</h1>
+		      <h1 class="title"><span class="undeline">浙江省</span>省级积分服务月账单</h1>
+		      <table border="0" cellspacing="0" cellpadding="8" align="center" class="head_info">
+		        <tbody><tr>
+		          <td class="bold" width="150">客户编号：</td>
+		          <td width="150"></td>
+		          <td width="150" class="bold">客户名称：</td>
+		          <td width="100"></td>
+		        </tr>
+		        <tr>
+		          <td class="bold">客户地址：</td>
+		          <td></td>
+		          <td class="bold">客户邮编：</td>
+		          <td></td>
+		        </tr>
+		        <tr>
+		          <td class="bold">总金额（小写）：</td>
+		          <td>￥1236333.46</td>
+		          <td class="bold">账期：</td>
+		          <td>2016年9月</td>
+		        </tr>
+		        <tr>
+		          <td class="bold">总金额（大写）：</td>
+		          <td colspan="3">人民币壹佰贰拾叁万陆仟叁佰叁拾叁元肆角陆分</td>
+		        </tr>
+		      </tbody></table>
+		      <p class="text-r bold">英泰伟业信息技术股份有限公司</p>
+		      <p class="text-r">北京市海淀区厂洼中街66号英泰科技大厦四层</p>
+		      <p class="text-r">生成日期：2016-11-20</p>
+		      <h2 class="border-t">附1：积分服务账单详情</h2>
+		      <table border="0" cellspacing="0" cellpadding="8" align="center" class="border">
+		        <thead>
+		          <tr><th>参与类型</th>
+		          <th>省级积分</th>
+		          <th>游戏币</th>
+		          <th>金额（元）</th>
+		        </tr></thead>
+					<tbody><tr>
+			          <th>参与兑换的数量</th>
+			          <td class="text-r">5,577,000</td>
+			          <td class="text-r">9,683,862,000</td>
+			          <td class="text-r">--</td>
+			        </tr>
+			        <tr>
+			          <th>参与游戏的数量</th>
+			          <td class="text-r">978,142,256</td>
+			          <td class="text-r">0</td>
+			          <td class="text-r">--</td>
+			        </tr>
+			        <tr>
+			          <th>本月合计</th>
+			          <td class="text-r">983,719,256</td>
+			          <td class="text-r">9,683,862,000</td>
+			          <td class="text-r">1236333.46</td>
+			        </tr>
+		      </tbody>
+		    </table>
+		</div>
+		</el-tab-pane>
 		<el-tab-pane label="定时任务补偿">444</el-tab-pane>
 	</el-tabs>
 	<el-dialog :title="editFormTtile" v-model="editFormVisible">
@@ -135,7 +200,7 @@
 			}
 		},
 		components: {
-			'print-table': printer
+			'el-print': printer
 		},
     methods: {
       handleRemove(tab) {
