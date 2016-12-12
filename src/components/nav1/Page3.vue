@@ -263,4 +263,5 @@ table { border-collapse: collapse;}
 	vertical-align: top;
 }
 .tj_title{width:100%;min-width:1000px;height:30px;line-height:30px;background:url(../../assets/tablebj.jpg) repeat-x;text-indent:20px;color:#fff;font-weight:bold;}
+.text-r { text-align: right;}
 </style>
